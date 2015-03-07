@@ -1,0 +1,8 @@
+[options]
+k=23
+data=tests/test-data.fastq
+outprefix=test
+[assemblers]
+1=velvet
+[other]
+1=echo

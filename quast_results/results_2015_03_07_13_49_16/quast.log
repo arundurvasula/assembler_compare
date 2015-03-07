@@ -1,0 +1,20 @@
+/Users/arundurvasula/Documents/Science/software/quast.py test.velvet/contigs.fa
+
+Version unknown
+
+System information:
+  OS: Darwin-13.4.0-x86_64-i386-64bit (macosx)
+  Python version: 2.7.8
+  CPUs number: 4
+
+Started: 2015-03-07 13:49:16
+
+Logging to /Users/arundurvasula/Documents/Science/assembler_compare/quast_results/results_2015_03_07_13_49_16/quast.log
+
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+Contigs:
+  test.velvet/contigs.fa ==> contigs
+WARNING: Skipping contigs because it doesn't contain contigs >= 500 bp.
+
+ERROR! None of the assembly files contains correct contigs. Please, provide different files or decrease --min-contig threshold.

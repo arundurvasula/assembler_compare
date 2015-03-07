@@ -28,13 +28,13 @@ class TestAssembler_compare(unittest.TestCase):
         self.assertEqual(self.assemblers, [("1", "velvet")])
         self.assertEqual(self.other, [("1", "echo")])
 
-    def test_velvet_assembly(self):
-    	assembler_compare.velvet(self.k, self.outprefix, self.data)
-    	self.assertTrue(os.path.isfile("test.velvet/contigs.fa"))
+    # def test_velvet_assembly(self):
+    # 	assembler_compare.velvet(self.k, self.outprefix, self.data)
+    # 	self.assertTrue(os.path.isfile("test.velvet/contigs.fa"))
 
-    def test_abyss(self):
-    	assembler_compare.abyss(self.k, self.outprefix, self.data)
-    	self.assertTrue(os.path.isfile("test-contigs.fa"))
+    # def test_abyss(self):
+    # 	assembler_compare.abyss(self.k, self.outprefix, self.data)
+    # 	self.assertTrue(os.path.isfile("test-contigs.fa"))
 
     def tearDown(self):
         del self.conf

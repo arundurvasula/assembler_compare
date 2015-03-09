@@ -11,6 +11,7 @@ from sys import exit
 # - place into pip package
 # - write readme
 # - write docs
+paired_end=False
 
 # step 1: read in configuration file
 def read_conf(conf):
@@ -36,8 +37,11 @@ def velvet(k, outprefix, data):
 
 def abyss(k, outprefix, data):
 	"""function to run the abyss-pe assembler on the data"""
+        if not paired_end:
+                raise ValueError("Abyss can only be used with paired end data and it looks like you are only supplying one file. \n Please provide paired end data.")
 	directory = outprefix+".abyss-pe"
-	string_data = " ".join(data)
+	string_data = "".join(data)
+        call(["mkdir", directory])
 	call(["abyss-pe", "k="+k, "name="+outprefix, "in="+string_data])
 	run_quast(directory+outprefix+"-contigs.fa")
 
@@ -65,7 +69,10 @@ if __name__ == '__main__':
 	known_assemblers = {'velvet':velvet,
  						'abyss':abyss}
 
-	# run assemblies
+	paired_end = False
+        if len(data.split(" ")) > 1:
+                paired_end = True
+        # run assemblies
 	if len(assemblers) > 0:
 		for item in assemblers:
 			current_assembler = item[1]

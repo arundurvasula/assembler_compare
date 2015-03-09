@@ -5,4 +5,4 @@ outprefix=test
 [assemblers]
 1=velvet
 [other]
-1=echo
+1=idba_ud

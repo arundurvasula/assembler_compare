@@ -1,0 +1,7 @@
+[options]
+k=23
+data=tests/pe_test_1.fastq tests/pe_test_2.fastq
+outprefix=test
+[assemblers]
+1=abyss
+[other]

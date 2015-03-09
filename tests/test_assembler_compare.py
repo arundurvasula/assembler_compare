@@ -16,7 +16,7 @@ from assembler_compare import assembler_compare
 class TestAssembler_compare(unittest.TestCase):
 
     def setUp(self):
-        self.conf = "tests/ac.txt"
+        self.conf = "tests/ac_single_end.txt"
         # need this for later functions
         self.k, self.data, self.outprefix, self.assemblers, self.other = assembler_compare.read_conf(self.conf)
 
